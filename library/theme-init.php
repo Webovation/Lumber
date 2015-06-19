@@ -1,4 +1,4 @@
-<?php 
+<?php defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 if ( ! function_exists( 'setup' ) ) {
 	function setup() {
@@ -13,9 +13,6 @@ if ( ! function_exists( 'setup' ) ) {
 
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 		remove_action( 'wp_print_styles', 'print_emoji_styles' );
-
-		// This filter hides the admin bar
-		// add_filter( 'show_admin_bar', '__return_false' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -33,7 +30,7 @@ if ( ! function_exists( 'setup' ) ) {
 
 		// Enable WordPress Menu
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary Menu', '_s' ),
+			'primary' => esc_html__( 'Primary Menu', '_l' ),
 		) );
 	}
 }
